@@ -16,7 +16,10 @@ identifiers:
     value: "10.5281/zenodo.21938851"
     description: "Zenodo archive of v1.0.0"
 repository-code: "https://github.com/Akshay-Nagle/Datacenter_Cooling_Climate_Zones"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
+license-note: "Source code (AWH Simulation/AWH_Simulation_Final.py) is MIT; EnergyPlus model and output data files (Energyplus Models/, AWH Simulation/AWH_Output/) are CC-BY-4.0 (see LICENSE-DATA.txt). TMY3 weather files are U.S. government/NREL public-domain data, not subject to either license."
 preferred-citation:
   type: article
   title: "Climate-adaptive data center cooling across U.S. climate zones: energy-water trade-offs and waste-heat-assisted atmospheric water harvesting"
