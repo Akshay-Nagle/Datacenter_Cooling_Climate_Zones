@@ -2,6 +2,8 @@
 
 **Energy-water trade-offs and waste-heat-assisted atmospheric water harvesting**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21938851.svg)](https://doi.org/10.5281/zenodo.21938851)
+
 Akshay Nagle, Jinyue Jiang, Paul Westerhoff
 School of Sustainable Engineering and the Built Environment, Arizona State University, Tempe, Arizona 85287, USA
 
@@ -114,9 +116,9 @@ awh.run_city_scenario("PHX", "60C")
 
 ## Data availability and citation
 
-This GitHub repository hosts the actively developed version of the code and data. A versioned snapshot corresponding to the published article should be archived on Zenodo with a persistent DOI and referenced here once minted.
+This repository is archived on Zenodo with a persistent DOI: [10.5281/zenodo.21938851](https://doi.org/10.5281/zenodo.21938851). The Zenodo archive corresponds to the `v1.0.0` GitHub release and reflects a fixed snapshot of the code and data at the time of journal submission; this GitHub repository may continue to be updated afterward.
 
-Please cite both the article and, where reusing code/data directly, the archived version (see `CITATION.cff`).
+Please cite both the associated article and, for direct reuse of code/data, the Zenodo-archived version (see `CITATION.cff`).
 
 ## License
 
