@@ -1,7 +1,14 @@
+!-Generator IDFEditor 1.55
+!-Option SortedOrder
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+
 !-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
 
 Version,
-    25.1.0;                    !- Version Identifier
+    25.1.0;                  !- Version Identifier
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
@@ -45,7 +52,7 @@ SurfaceConvectionAlgorithm:Outside,
 
 HeatBalanceAlgorithm,
     ConductionTransferFunction,  !- Algorithm
-    1000,                     !- Surface Temperature Upper Limit {C}
+    1000,                    !- Surface Temperature Upper Limit {C}
     0.1,                     !- Minimum Surface Convection Heat Transfer Coefficient Value {W/m2-K}
     1000;                    !- Maximum Surface Convection Heat Transfer Coefficient Value {W/m2-K}
 
@@ -69,68 +76,69 @@ ConvergenceLimits,
 
 Site:Location,
     Denver Intl Ap CO USA WMO=725650,  !- Name
-    39.83,                              !- Latitude {deg}
-    -104.65,                            !- Longitude {deg}
-    -7,                                 !- Time Zone {hr}
-    1650;                               !- Elevation {m} ← HIGH ALTITUDE!
+    39.83,                   !- Latitude {deg}
+    -104.65,                 !- Longitude {deg}
+    -7,                      !- Time Zone {hr}
+    1650;                    !- Elevation {m}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SIZINGPERIOD:DESIGNDAY ===========
 
 SizingPeriod:DesignDay,
-    Denver Ann Htg 99.6% Condns DB,    !- Name
-    1,                                  !- Month
-    21,                                 !- Day of Month
-    WinterDesignDay,                    !- Day Type
-    -18.8,                              !- Maximum Dry-Bulb Temperature {C}
-    0,                                  !- Daily Dry-Bulb Temperature Range {deltaC}
-    DefaultMultipliers,                 !- Dry-Bulb Temperature Range Modifier Type
-    ,                                   !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                            !- Humidity Condition Type
-    -18.8,                              !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-    ,                                   !- Humidity Condition Day Schedule Name
-    ,                                   !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-    ,                                   !- Enthalpy at Maximum Dry-Bulb {J/kg}
-    ,                                   !- Daily Wet-Bulb Temperature Range {deltaC}
-    83411,                              !- Barometric Pressure {Pa} ← LOW (altitude)
-    3.0,                                !- Wind Speed {m/s}
-    180,                                !- Wind Direction {deg}
-    No,                                 !- Rain Indicator
-    No,                                 !- Snow Indicator
-    No,                                 !- Daylight Saving Time Indicator
-    ASHRAEClearSky,                     !- Solar Model Indicator
-    ,                                   !- Beam Solar Day Schedule Name
-    ,                                   !- Diffuse Solar Day Schedule Name
-    ,                                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {taub}
-    ,                                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {taud}
-    0;                                  !- Sky Clearness
+    Denver Ann Htg 99.6% Condns DB,  !- Name
+    1,                       !- Month
+    21,                      !- Day of Month
+    WinterDesignDay,         !- Day Type
+    -18.8,                   !- Maximum Dry-Bulb Temperature {C}
+    0,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                 !- Humidity Condition Type
+    -18.8,                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    83411,                   !- Barometric Pressure {Pa}
+    3.0,                     !- Wind Speed {m/s}
+    180,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0;                       !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Denver Ann Clg .4% Condns DB=>MWB, !- Name
-    7,                                  !- Month
-    21,                                 !- Day of Month
-    SummerDesignDay,                    !- Day Type
-    34.1,                               !- Maximum Dry-Bulb Temperature {C}
-    15.2,                               !- Daily Dry-Bulb Temperature Range {deltaC}
-    DefaultMultipliers,                 !- Dry-Bulb Temperature Range Modifier Type
-    ,                                   !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                            !- Humidity Condition Type
-    15.6,                               !- Wetbulb at Maximum Dry-Bulb {C} ← VERY DRY!
-    ,                                   !- Humidity Condition Day Schedule Name
-    ,                                   !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-    ,                                   !- Enthalpy at Maximum Dry-Bulb {J/kg}
-    ,                                   !- Daily Wet-Bulb Temperature Range {deltaC}
-    83411,                              !- Barometric Pressure {Pa} ← LOW (altitude)
-    4.4,                                !- Wind Speed {m/s}
-    120,                                !- Wind Direction {deg}
-    No,                                 !- Rain Indicator
-    No,                                 !- Snow Indicator
-    No,                                 !- Daylight Saving Time Indicator
-    ASHRAETau,                          !- Solar Model Indicator
-    ,                                   !- Beam Solar Day Schedule Name
-    ,                                   !- Diffuse Solar Day Schedule Name
-    0.28,                               !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {taub}
-    2.38;                               !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {taud}
+    Denver Ann Clg .4% Condns DB=>MWB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    34.1,                    !- Maximum Dry-Bulb Temperature {C}
+    15.2,                    !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                 !- Humidity Condition Type
+    15.6,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    83411,                   !- Barometric Pressure {Pa}
+    4.4,                     !- Wind Speed {m/s}
+    120,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.28,                    !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.38;                    !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
 
 !-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
 
@@ -153,51 +161,53 @@ RunPeriod,
 !-   ===========  ALL OBJECTS IN CLASS: SITE:GROUNDTEMPERATURE:BUILDINGSURFACE ===========
 
 Site:GroundTemperature:BuildingSurface,
-    1,    !- January Ground Temperature {C}
-    2,    !- February Ground Temperature {C}
-    5,    !- March Ground Temperature {C}
-    9,    !- April Ground Temperature {C}
-    14,   !- May Ground Temperature {C}
-    18,   !- June Ground Temperature {C}
-    21,   !- July Ground Temperature {C}
-    21,   !- August Ground Temperature {C}
-    17,   !- September Ground Temperature {C}
-    12,   !- October Ground Temperature {C}
-    7,    !- November Ground Temperature {C}
-    3;    !- December Ground Temperature {C}
+    1,                       !- January Ground Temperature {C}
+    2,                       !- February Ground Temperature {C}
+    5,                       !- March Ground Temperature {C}
+    9,                       !- April Ground Temperature {C}
+    14,                      !- May Ground Temperature {C}
+    18,                      !- June Ground Temperature {C}
+    21,                      !- July Ground Temperature {C}
+    21,                      !- August Ground Temperature {C}
+    17,                      !- September Ground Temperature {C}
+    12,                      !- October Ground Temperature {C}
+    7,                       !- November Ground Temperature {C}
+    3;                       !- December Ground Temperature {C}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SITE:GROUNDTEMPERATURE:SHALLOW ===========
 
 Site:GroundTemperature:Shallow,
-    -1,   !- January Surface Ground Temperature {C}
-    0,    !- February Surface Ground Temperature {C}
-    3,    !- March Surface Ground Temperature {C}
-    9,    !- April Surface Ground Temperature {C}
-    15,   !- May Surface Ground Temperature {C}
-    20,   !- June Surface Ground Temperature {C}
-    23,   !- July Surface Ground Temperature {C}
-    23,   !- August Surface Ground Temperature {C}
-    19,   !- September Surface Ground Temperature {C}
-    13,   !- October Surface Ground Temperature {C}
-    6,    !- November Surface Ground Temperature {C}
-    1;    !- December Surface Ground Temperature {C}
+    -1,                      !- January Surface Ground Temperature {C}
+    0,                       !- February Surface Ground Temperature {C}
+    3,                       !- March Surface Ground Temperature {C}
+    9,                       !- April Surface Ground Temperature {C}
+    15,                      !- May Surface Ground Temperature {C}
+    20,                      !- June Surface Ground Temperature {C}
+    23,                      !- July Surface Ground Temperature {C}
+    23,                      !- August Surface Ground Temperature {C}
+    19,                      !- September Surface Ground Temperature {C}
+    13,                      !- October Surface Ground Temperature {C}
+    6,                       !- November Surface Ground Temperature {C}
+    1;                       !- December Surface Ground Temperature {C}
+
 
 !-   ===========  ALL OBJECTS IN CLASS: SITE:GROUNDTEMPERATURE:DEEP ===========
 
 Site:GroundTemperature:Deep,
-    10,   !- January Deep Ground Temperature {C}
-    10,   !- February Deep Ground Temperature {C}
-    10,   !- March Deep Ground Temperature {C}
-    10,   !- April Deep Ground Temperature {C}
-    10,   !- May Deep Ground Temperature {C}
-    10,   !- June Deep Ground Temperature {C}
-    10,   !- July Deep Ground Temperature {C}
-    10,   !- August Deep Ground Temperature {C}
-    10,   !- September Deep Ground Temperature {C}
-    10,   !- October Deep Ground Temperature {C}
-    10,   !- November Deep Ground Temperature {C}
-    10;   !- December Deep Ground Temperature {C}
+    10,                      !- January Deep Ground Temperature {C}
+    10,                      !- February Deep Ground Temperature {C}
+    10,                      !- March Deep Ground Temperature {C}
+    10,                      !- April Deep Ground Temperature {C}
+    10,                      !- May Deep Ground Temperature {C}
+    10,                      !- June Deep Ground Temperature {C}
+    10,                      !- July Deep Ground Temperature {C}
+    10,                      !- August Deep Ground Temperature {C}
+    10,                      !- September Deep Ground Temperature {C}
+    10,                      !- October Deep Ground Temperature {C}
+    10,                      !- November Deep Ground Temperature {C}
+    10;                      !- December Deep Ground Temperature {C}
+
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
 
@@ -248,7 +258,7 @@ Schedule:Compact,
     Through: 12/31,          !- Field 1
     FOR: AllDays,            !- Field 2
     UNTIL: 24:00,            !- Field 3
-	1;                     !- Field 4
+    1;                       !- Field 4
 
 Schedule:Compact,
     CW Loop Temp Schedule,   !- Name
@@ -917,6 +927,8 @@ Lights,
     GeneralLights;           !- End-Use Subcategory
 
 
+!-   ===========  ALL OBJECTS IN CLASS: ELECTRICEQUIPMENT:ITE:AIRCOOLED ===========
+
 ElectricEquipment:ITE:AirCooled,
     HybridDataCenter_Equip,  !- Name
     Hybrid Zone,             !- Zone or Space Name
@@ -934,7 +946,7 @@ ElectricEquipment:ITE:AirCooled,
     ECM FanPower fFlow,      !- Fan Power Input Function of Flow Curve Name
     15,                      !- Design Entering Air Temperature {C}
     A2,                      !- Environmental Class
-    AdjustedSupply,             !- Air Inlet Connection Type
+    AdjustedSupply,          !- Air Inlet Connection Type
     ,                        !- Air Inlet Room Air Model Node Name
     ,                        !- Air Outlet Room Air Model Node Name
     Hybrid Zone Inlet Node,  !- Supply Air Node Name
@@ -961,6 +973,7 @@ DesignSpecification:OutdoorAir,
     0.0;                     !- Outdoor Air Flow per Zone {m3/s}
 
 
+!-   ===========  ALL OBJECTS IN CLASS: SIZING:PARAMETERS ===========
 
 Sizing:Parameters,
     1.1,                     !- Heating Sizing Factor
@@ -978,7 +991,7 @@ Sizing:Zone,
     40,                      !- Zone Heating Design Supply Air Temperature {C}
     ,                        !- Zone Heating Design Supply Air Temperature Difference {deltaC}
     0.0085,                  !- Zone Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0085,                   !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.0085,                  !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
     SZ DSOA Hybrid Zone,     !- Design Specification Outdoor Air Object Name
     0.0,                     !- Zone Heating Sizing Factor
     0.0,                     !- Zone Cooling Sizing Factor
@@ -1014,13 +1027,13 @@ Sizing:System,
     autosize,                !- Design Outdoor Air Flow Rate {m3/s}
     0.4,                     !- Central Heating Maximum System Air Flow Ratio
     7.0,                     !- Preheat Design Temperature {C}
-    0.0085,                   !- Preheat Design Humidity Ratio {kgWater/kgDryAir}
+    0.0085,                  !- Preheat Design Humidity Ratio {kgWater/kgDryAir}
     12.8000,                 !- Precool Design Temperature {C}
-    0.0085,                   !- Precool Design Humidity Ratio {kgWater/kgDryAir}
+    0.0085,                  !- Precool Design Humidity Ratio {kgWater/kgDryAir}
     18.9,                    !- Central Cooling Design Supply Air Temperature {C}
     30.0,                    !- Central Heating Design Supply Air Temperature {C}
     NonCoincident,           !- Type of Zone Sum to Use
-    No,                     !- 100% Outdoor Air in Cooling
+    No,                      !- 100% Outdoor Air in Cooling
     No,                      !- 100% Outdoor Air in Heating
     0.0090,                  !- Central Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
     0.0090,                  !- Central Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
@@ -1115,6 +1128,7 @@ ZoneHVAC:EquipmentList,
     ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
 
 
+!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:EQUIPMENTCONNECTIONS ===========
 
 ZoneHVAC:EquipmentConnections,
     Hybrid Zone,             !- Zone Name
@@ -1172,9 +1186,9 @@ Coil:Cooling:Water,
 EvaporativeCooler:Indirect:ResearchSpecial,
     Hybrid Data Center IEC,  !- Name
     IEC_Availability_Schedule,  !- Availability Schedule Name
-    0.9,                    !- Cooler Wetbulb Design Effectiveness
+    0.9,                     !- Cooler Wetbulb Design Effectiveness
     IECEffWBFlowMod,         !- Wetbulb Effectiveness Flow Ratio Modifier Curve Name
-    0.9,                    !- Cooler Drybulb Design Effectiveness
+    0.9,                     !- Cooler Drybulb Design Effectiveness
     IECEffDBFlowMod,         !- Drybulb Effectiveness Flow Ratio Modifier Curve Name
     autosize,                !- Recirculating Water Pump Design Power {W}
     150.0,                   !- Water Pump Power Sizing Factor {W/(m3/s)}
@@ -1252,7 +1266,7 @@ Controller:OutdoorAir,
     ,                        !- Economizer Maximum Limit Enthalpy {J/kg}
     15.0,                    !- Economizer Maximum Limit Dewpoint Temperature {C}
     ,                        !- Electronic Enthalpy Limit Curve Name
-    -100.0,                   !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    -100.0,                  !- Economizer Minimum Limit Dry-Bulb Temperature {C}
     NoLockout,               !- Lockout Type
     FixedMinimum,            !- Minimum Limit Type
     OAFractionSched;         !- Minimum Outdoor Air Schedule Name
@@ -1357,6 +1371,8 @@ AirLoopHVAC:ReturnPath,
     AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
     Hybrid Return Air Mixer; !- Component 1 Name
 
+
+!-   ===========  ALL OBJECTS IN CLASS: BRANCH ===========
 
 Branch,
     Hybrid Zone Air Loop Main Branch,  !- Name
@@ -1517,7 +1533,6 @@ BranchList,
     Hybrid Zone Air Loop Branches,  !- Name
     Hybrid Zone Air Loop Main Branch;  !- Branch 1 Name
 
-
 BranchList,
     Cooling Supply Side Branches,  !- Name
     CW Supply Pump Branch,   !- Branch 1 Name
@@ -1531,7 +1546,6 @@ BranchList,
     Hybrid CW Cooling Coil Branch,  !- Branch 2 Name
     CW Demand Bypass Branch, !- Branch 3 Name
     CW Demand Outlet Branch; !- Branch 4 Name
-
 
 BranchList,
     Condenser Supply Side Branches,  !- Name
@@ -1611,7 +1625,6 @@ ConnectorList,
     Connector:Mixer,         !- Connector 2 Object Type
     CW Loop Supply Mixer;    !- Connector 2 Name
 
-
 ConnectorList,
     Condenser Supply Side Connectors,  !- Name
     Connector:Splitter,      !- Connector 1 Object Type
@@ -1667,6 +1680,8 @@ OutdoorAir:NodeList,
     HybridIECOutsideAirInletNodes;  !- Node or NodeList Name 1
 
 
+!-   ===========  ALL OBJECTS IN CLASS: PIPE:ADIABATIC ===========
+
 Pipe:Adiabatic,
     CW Supply Side Bypass Pipe,  !- Name
     CW Supply Bypass Inlet Node,  !- Inlet Node Name
@@ -1719,6 +1734,8 @@ Pipe:Adiabatic,
     Condenser Demand Outlet Node;  !- Outlet Node Name
 
 
+!-   ===========  ALL OBJECTS IN CLASS: PUMP:VARIABLESPEED ===========
+
 Pump:VariableSpeed,
     CW Circ Pump,            !- Name
     CW Supply Inlet Node,    !- Inlet Node Name
@@ -1753,6 +1770,7 @@ Pump:VariableSpeed,
     INTERMITTENT;            !- Pump Control Type
 
 
+!-   ===========  ALL OBJECTS IN CLASS: CHILLER:ELECTRIC ===========
 
 Chiller:Electric,
     Chiller,                 !- Name
@@ -1766,7 +1784,7 @@ Chiller:Electric,
     0.15,                    !- Minimum Part Load Ratio
     1.0,                     !- Maximum Part Load Ratio
     0.65,                    !- Optimum Part Load Ratio
-    41.7,                   !- Design Condenser Inlet Temperature {C}
+    41.7,                    !- Design Condenser Inlet Temperature {C}
     2.682759,                !- Temperature Rise Coefficient
     6.667,                   !- Design Chilled Water Outlet Temperature {C}
     autosize,                !- Design Chilled Water Flow Rate {m3/s}
@@ -1784,6 +1802,7 @@ Chiller:Electric,
     NotModulated;            !- Chiller Flow Mode
 
 
+!-   ===========  ALL OBJECTS IN CLASS: COOLINGTOWER:VARIABLESPEED ===========
 
 CoolingTower:VariableSpeed,
     Cooling Tower,           !- Name
@@ -1850,6 +1869,9 @@ CoolingTowerPerformance:YorkCalc,
     -0.0034285382352,        !- Coefficient 25
     0.00000856589904,        !- Coefficient 26
     -0.000001516821552;      !- Coefficient 27
+
+
+!-   ===========  ALL OBJECTS IN CLASS: PLANTLOOP ===========
 
 PlantLoop,
     Chilled Water Loop,      !- Name
@@ -1939,6 +1961,7 @@ PlantEquipmentOperationSchemes,
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:SENSOR ===========
+
 EnergyManagementSystem:Sensor,
     OA_Temp,                 !- Name
     Environment,             !- Output:Variable or Output:Meter Index Key Name
@@ -1950,10 +1973,9 @@ EnergyManagementSystem:Sensor,
     Site Outdoor Air Wetbulb Temperature;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
-    Supply_Air_Temp_After_DEC,           !- Name
-    Hybrid Zone DEC Outlet Node,     !- Output:Variable Index Key Name
-    System Node Temperature;         !- Output:Variable Name
-	
+    Supply_Air_Temp_After_DEC,  !- Name
+    Hybrid Zone DEC Outlet Node,  !- Output:Variable or Output:Meter Index Key Name
+    System Node Temperature; !- Output:Variable or Output:Meter Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:ACTUATOR ===========
@@ -1972,64 +1994,65 @@ EnergyManagementSystem:Actuator,
     Schedule Value;          !- Actuated Component Control Type
 
 EnergyManagementSystem:Actuator,
-    CW_Coil_Override,                  !- Name
-    CW_Staged_Availability_Schedule,    !- Actuated Component Unique Name
-    Schedule:Compact,                !- Actuated Component Type
-    Schedule Value;                  !- Actuated Component Control Type
+    CW_Coil_Override,        !- Name
+    CW_Staged_Availability_Schedule,  !- Actuated Component Unique Name
+    Schedule:Compact,        !- Actuated Component Type
+    Schedule Value;          !- Actuated Component Control Type
+
+
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:PROGRAMCALLINGMANAGER ===========
 
 EnergyManagementSystem:ProgramCallingManager,
     Comprehensive_EMS_Manager,  !- Name
     BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    Cooling_Stage_Controller;!- Program Name 2
+    Cooling_Stage_Controller;!- Program Name 1
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:PROGRAM ===========
 
 EnergyManagementSystem:Program,
-    Cooling_Stage_Controller,        !- Name
-    IF OA_Temp < -50,                 !- Program Line 1
-        SET IEC_Override = 0,         !- Program Line 2
-        SET DEC_Override = 0,         !- Program Line 3
-        SET CW_Coil_Override = 0,      !- Program Line 4
-    ELSEIF OA_Temp > 60,              !- Program Line 5
-        SET IEC_Override = 0,         !- Program Line 6
-        SET DEC_Override = 0,         !- Program Line 7
-        SET CW_Coil_Override = 1,      !- Program Line 8
-    ELSEIF OA_Temp < 18.9,            !- Program Line 9
-        SET IEC_Override = 0,         !- Program Line 10
-        SET DEC_Override = 0,         !- Program Line 11
-        SET CW_Coil_Override = 0,      !- Program Line 12
-    ELSEIF OA_Temp < 22,              !- Program Line 13
-        IF OA_WetBulb < 16,           !- Program Line 14
-            SET IEC_Override = 1,     !- Program Line 15
-            SET DEC_Override = 0,     !- Program Line 16
-            SET CW_Coil_Override = 0,  !- Program Line 17
-        ELSE,                        !- Program Line 18
-            SET IEC_Override = 1,     !- Program Line 19
-            SET DEC_Override = 0,     !- Program Line 20
-            SET CW_Coil_Override = 1,  !- Program Line 21
-        ENDIF,                       !- Program Line 22
-    ELSEIF OA_Temp < 27,              !- Program Line 23
-        IF OA_WetBulb < 20,           !- Program Line 24
-            SET IEC_Override = 1,     !- Program Line 25
-            SET DEC_Override = 1,     !- Program Line 26
-            SET CW_Coil_Override = 0,  !- Program Line 27
-        ELSE,                        !- Program Line 28
-            SET IEC_Override = 1,     !- Program Line 29
-            SET DEC_Override = 1,     !- Program Line 30
-            SET CW_Coil_Override = 1,  !- Program Line 31
-        ENDIF,                       !- Program Line 32
-    ELSE,                            !- Program Line 33
-        SET IEC_Override = 1,         !- Program Line 34
-        SET DEC_Override = 1,         !- Program Line 35
-        IF Supply_Air_Temp_After_DEC > 19.5, !- Program Line 36
-            SET CW_Coil_Override = 1,  !- Program Line 37
-        ELSE,                        !- Program Line 38
-            SET CW_Coil_Override = 0,  !- Program Line 39
-        ENDIF,                       !- Program Line 40
-    ENDIF;                           !- Program Line 41
-
+    Cooling_Stage_Controller,!- Name
+    IF OA_Temp < -50,        !- Program Line 1
+    SET IEC_Override = 0,    !- Program Line 2
+    SET DEC_Override = 0,    !- A4
+    SET CW_Coil_Override = 0,!- A5
+    ELSEIF OA_Temp > 60,     !- A6
+    SET IEC_Override = 0,    !- A7
+    SET DEC_Override = 0,    !- A8
+    SET CW_Coil_Override = 1,!- A9
+    ELSEIF OA_Temp < 18.9,   !- A10
+    SET IEC_Override = 0,    !- A11
+    SET DEC_Override = 0,    !- A12
+    SET CW_Coil_Override = 0,!- A13
+    ELSEIF OA_Temp < 22,     !- A14
+    IF OA_WetBulb < 16,      !- A15
+    SET IEC_Override = 1,    !- A16
+    SET DEC_Override = 0,    !- A17
+    SET CW_Coil_Override = 0,!- A18
+    ELSE,                    !- A19
+    SET IEC_Override = 1,    !- A20
+    SET DEC_Override = 0,    !- A21
+    SET CW_Coil_Override = 1,!- A22
+    ENDIF,                   !- A23
+    ELSEIF OA_Temp < 27,     !- A24
+    IF OA_WetBulb < 20,      !- A25
+    SET IEC_Override = 1,    !- A26
+    SET DEC_Override = 1,    !- A27
+    SET CW_Coil_Override = 0,!- A28
+    ELSE,                    !- A29
+    SET IEC_Override = 1,    !- A30
+    SET DEC_Override = 1,    !- A31
+    SET CW_Coil_Override = 1,!- A32
+    ENDIF,                   !- A33
+    ELSE,                    !- A34
+    SET IEC_Override = 1,    !- A35
+    SET DEC_Override = 1,    !- A36
+    IF Supply_Air_Temp_After_DEC > 19.5,  !- A37
+    SET CW_Coil_Override = 1,!- A38
+    ELSE,                    !- A39
+    SET CW_Coil_Override = 0,!- A40
+    ENDIF,                   !- A41
+    ENDIF;                   !- A42
 
 
 !-   ===========  ALL OBJECTS IN CLASS: AVAILABILITYMANAGER:SCHEDULED ===========
@@ -2062,8 +2085,8 @@ SetpointManager:Scheduled,
 SetpointManager:SingleZone:Cooling,
     Hybrid System Setpoint manager,  !- Name
     Temperature,             !- Control Variable
-    10,                   !- Minimum Supply Air Temperature {C}
-    30,                    !- Maximum Supply Air Temperature {C}
+    10,                      !- Minimum Supply Air Temperature {C}
+    30,                      !- Maximum Supply Air Temperature {C}
     Hybrid Zone,             !- Control Zone Name
     Hybrid Zone Air Node,    !- Zone Node Name
     Hybrid Zone Inlets,      !- Zone Inlet Node Name
@@ -2088,7 +2111,7 @@ SetpointManager:FollowOutdoorAirTemperature,
     CondenserControl SetpointManager,  !- Name
     Temperature,             !- Control Variable
     OutdoorAirWetBulb,       !- Reference Temperature Type
-    5,                      !- Offset Temperature Difference {deltaC}
+    5,                       !- Offset Temperature Difference {deltaC}
     45,                      !- Maximum Setpoint Temperature {C}
     10,                      !- Minimum Setpoint Temperature {C}
     Condenser Supply Outlet Node;  !- Setpoint Node or NodeList Name
@@ -2129,10 +2152,10 @@ Curve:Cubic,
 
 Curve:Biquadratic,
     Data Center Servers Power fLoadTemp,  !- Name
-    0,                    !- Coefficient1 Constant
+    0,                       !- Coefficient1 Constant
     1.0,                     !- Coefficient2 x
     0.0,                     !- Coefficient3 x**2
-    0.0,                 !- Coefficient4 y
+    0.0,                     !- Coefficient4 y
     0.0,                     !- Coefficient5 y**2
     0.0,                     !- Coefficient6 x*y
     0.0,                     !- Minimum Value of x
@@ -2441,9 +2464,34 @@ OutputControl:Table:Style,
     HTML;                    !- Column Separator
 
 
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
+
+Output:Variable,
+    Condenser Tower Inlet Node,  !- Key Value
+    System Node Mass Flow Rate,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    Condenser Tower Inlet Node,  !- Key Value
+    System Node Temperature, !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Site Outdoor Air Drybulb Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Site Outdoor Air Wetbulb Temperature,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER ===========
+
 Output:Meter,
     *,                       !- Key Name
-    Hourly;                 !- Reporting Frequency
+    Hourly;                  !- Reporting Frequency
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DIAGNOSTICS ===========
@@ -2451,22 +2499,3 @@ Output:Meter,
 Output:Diagnostics,
     DisplayExtraWarnings;    !- Key 1
 
-Output:Variable,
-    Condenser Tower Inlet Node,  !- Key Value
-    System Node Mass Flow Rate,  !- Variable Name
-    Hourly;                 !- Reporting Frequency
-	
-Output:Variable,
-    Condenser Tower Inlet Node,  !- Key Value
-    System Node Temperature, !- Variable Name
-    Hourly;                 !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Site Outdoor Air Drybulb Temperature,  !- Variable Name
-    Hourly;                 !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Site Outdoor Air Wetbulb Temperature,  !- Variable Name
-    Hourly;                 !- Reporting Frequency	
