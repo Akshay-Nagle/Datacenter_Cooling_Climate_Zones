@@ -183,8 +183,9 @@ CITY_CONFIGS = {
 # ----------------------------------------------------------------------
 # Paths -- EDIT THESE to match your local directory structure.
 # ----------------------------------------------------------------------
-INPUT_TEMPLATE = r"datacenter-cooling-climate-zones\Energyplus Models\{label}\Hybrid\{city}_Original Hybrid.csv"
-OUTPUT_BASE_DIR = r"datacenter-cooling-climate-zones\AWH Simulation\AWH_Output"
+BASE_DIR = Path(__file__).resolve().parent.parent  
+INPUT_TEMPLATE = str(BASE_DIR / "Energyplus Models" / "{label}" / "Hybrid" / "{city}_Original Hybrid.csv")
+OUTPUT_BASE_DIR = str(BASE_DIR / "AWH Simulation" / "AWH_Output")
 
 EPW_YEAR = 2024
 
