@@ -10,6 +10,11 @@ authors:
     given-names: Paul
 version: "1.0.0"
 date-released: "2026-08-14"
+doi: "10.5281/zenodo.21938851"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21938851"
+    description: "Zenodo archive of v1.0.0"
 repository-code: "https://github.com/Akshay-Nagle/Datacenter_Cooling_Climate_Zones"
 license: MIT
 preferred-citation:
