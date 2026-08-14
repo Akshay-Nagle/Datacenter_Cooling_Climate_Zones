@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the associated article and, for direct reuse of code/data, this repository/archive."
+title: "Climate-Adaptive Data Center Cooling Across U.S. Climate Zones: Energy-Water Trade-offs and Waste-Heat-Driven Atmospheric Water Harvesting - Code and Data"
+authors:
+  - family-names: Nagle
+    given-names: Akshay
+  - family-names: Jiang
+    given-names: Jinyue
+  - family-names: Westerhoff
+    given-names: Paul
+version: "1.0.0"
+date-released: "2026-08-14"
+repository-code: "https://github.com/Akshay-Nagle/datacenter-cooling-climate-zones"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Climate-adaptive data center cooling across U.S. climate zones: energy-water trade-offs and waste-heat-driven atmospheric water harvesting"
+  authors:
+    - family-names: Nagle
+      given-names: Akshay
+    - family-names: Jiang
+      given-names: Jinyue
+    - family-names: Westerhoff
+      given-names: Paul
+  journal: "Energy and Climate Change"
+  year: 2026
