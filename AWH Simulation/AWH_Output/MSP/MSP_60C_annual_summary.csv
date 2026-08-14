@@ -1,0 +1,2 @@
+city,scenario,T_target_C,cycle_min,recovery_fraction,cop_efficiency_factor,fleet_units_autosized,total_chiller_on_hours,pct_year_chiller_on,wasted_block_hours,pct_chiller_on_hours_wasted,completed_cycles,total_water_L,total_water_L_per_day,total_heat_pump_elec_kWh
+MSP,60C,60.0,180.0,0.85,0.45,1771693,803,9.166666666666666,2.0,0.24906600249066002,267,8616179.1606532,23605.97030315945,1593560.9886507806

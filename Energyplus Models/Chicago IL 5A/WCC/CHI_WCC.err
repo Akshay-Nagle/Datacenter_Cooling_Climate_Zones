@@ -1,0 +1,52 @@
+Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2026.08.11 14:47,
+   ** Warning ** Timestep: Requested number (1) is less than the suggested minimum of 4.
+   **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.
+   **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.
+   ** Warning ** Calculated design heating load for zone=ZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning System Sizing Calculations
+   ** Warning ** ManageSizing: Calculated Heating Design Air Flow Rate for System=ZONE AIR SYSTEM is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** The range for the cooling tower COOLING TOWER likely exceeds the bounds of the model. The maximum range of the model is used 22.2222.
+   **   ~~~   **  ... Occurrence info = CHICAGO ANN CLG .4% CONDNS DB=>MWB, 07/21 00:00 - 01:00
+   ** Warning ** GetPollutionFactorInput: Requested reporting for Carbon Equivalent Pollution, but insufficient information is entered.
+   **   ~~~   ** Both "FuelFactors" and "EnvironmentalImpactFactors" must be entered or the displayed carbon pollution will all be zero.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Warning ** CoolingTower:VariableSpeed "COOLING TOWER" - Tower range temperature is outside model boundaries at 5.89E-004.
+   **   ~~~   **  ...Valid range = 1.11 to 22.22. Occurrence info = FULLYEAR, 02/08 03:00 - 04:00
+   **   ~~~   **  ...Tower range temperature passed to the model = 5.89223E-004
+   **   ~~~   **  ...Range temperatures outside model boundaries may not adversely affect tower performance.
+   **   ~~~   **  ...This is not an unexpected occurrence when simulating actual conditions.
+   ** Warning ** CoolingTower:VariableSpeed "COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at 26.95.
+   **   ~~~   **  ...Valid range = -34.40 to 26.67. Occurrence info = FULLYEAR, 07/19 16:00 - 17:00
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = 26.666700
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ************* Simulation Error Summary *************
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** The range for the cooling tower COOLING TOWER likely exceeds the bounds of the model. The maximum range of the model is used 22.2222
+   *************  **   ~~~   **   This error occurred 523 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************
+   *************  ** Warning ** CoolingTower:VariableSpeed "COOLING TOWER" - Tower range temperature is out of range error continues...
+   *************  **   ~~~   **   This error occurred 844 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.109777  Min=0.000152
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 3 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 1375 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  1.10sec

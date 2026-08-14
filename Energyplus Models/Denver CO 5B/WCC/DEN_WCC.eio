@@ -1,0 +1,204 @@
+Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2026.08.11 14:46
+! <Version>, Version ID
+ Version, 25.1.0
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  1, 60
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 60, 200, 1, 5
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, Yes, No, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 1, No, 1, No, 60.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,   1.00,   2.00,   5.00,   9.00,  14.00,  18.00,  21.00,  21.00,  17.00,  12.00,   7.00,   3.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,   0.36,   2.33,   6.17,   9.79,  16.66,  20.28,  21.27,  19.44,  15.20,   9.93,   4.73,   1.30
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  -1.00,   0.00,   3.00,   9.00,  15.00,  20.00,  23.00,  23.00,  19.00,  13.00,   6.00,   1.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00,  10.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Denver Intl Ap CO USA TMY3 WMO#=725650,39.83,-104.65,-7.00,1650.00,83011,0.9866
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,FixedDefault,NA,NA,NA,10.0
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,WCC,0.000,City,4.00000E-002,0.20000,MinimalShadowing,62,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Algorithm {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}, Space Heat Balance Sizing, Space Heat Balance Simulation
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference, No, No
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing and Return {AdjustMixingOnly | AdjustReturnOnly | AdjustMixingThenReturn | AdjustReturnThenMixing | None}, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,WorldCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,1000,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,2,12,0
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, ZONE,0.0,0.00,0.00,0.00,79.00,79.00,2.54,1,1,1,0.00,158.00,0.00,158.00,0.50,4.57,4.07,101653.41,TARP,DOE-2,24964.00,2573.50,2573.50,0.00,6,0,0,Yes
+ Zone Information, PLENUM,0.0,0.00,0.00,0.00,79.00,79.00,0.25,1,1,1,0.00,158.00,0.00,158.00,0.00,0.50,0.50,12482.00,TARP,DOE-2,24964.00,316.00,316.00,0.00,6,0,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, ZONE,24964.00,0.0,N/A,0.000,1.138E-002,400.000,0.000,0.000,0.000,0.000,400.011,No
+ Zone Internal Gains Nominal, PLENUM,24964.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Minimum Number of People for All Day Types,Maximum Number of People for All Day Types,Minimum Number of People for Weekdays, Maximum Number of People for Weekdays, Minimum Number of People for Weekends/Holidays, Maximum Number of People for Weekends /Holidays,Minimum Number of People for Summer Design Days, Maximum Number of People for Summer Design Days,Minimum Number of People for Winter Design Days, Maximum Number of People for Winter Design Days,MRT Calculation Type,Work Efficiency, Clothing Insulation Calculation Method,Clothing Insulation Calculation Method Schedule,Clothing,Air Velocity,Fanger Calculation,Pierce Calculation,KSU Calculation,Cooling Effect Calculation,Ankle Draft Calculation
+ People Internal Gains Nominal, ZONE PEOPLE,OFFICE OCCUPANCY,ZONE,24964.00,0.0,0.0,0.000,N/A,0.300,0.700,AutoCalculate,ACTIVITY SCH,No,3.8200E-008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Zone Averaged,WORK EFF SCH,Clothing Insulation Schedule,N/A,CLOTHING SCH,AIR VELO SCH,Yes,No,No,No,No
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use, Minimum Lighting Level for All Day Types {W},Maximum Lighting Level for All Day Types {W},Minimum Lighting Level for Weekdays {W}, Maximum Lighting Level for Weekdays {W},Minimum Lighting Level for Weekends/Holidays {W}, Maximum Lighting Level for Weekends /Holidays {W},Minimum Lighting Level for Summer Design Days {W}, Maximum Lighting Level for Summer Design Days {W},Minimum Lighting Level for Winter Design Days {W}, Maximum Lighting Level for Winter Design Days {W}
+ Lights Internal Gains Nominal, ZONE LIGHTS,LIGHTS-1,ZONE,24964.00,0.0,284.000,1.138E-002,N/A,0.000,0.590,0.200,0.210,0.000,GeneralLights,14.200,284.000,14.200,284.0,14.200,14.200,14.200,284.000,14.200,284.000
+! <ElectricEquipment:ITE:AirCooled Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Convected,CPU End-Use SubCategory,Fan End-Use SubCategory,UPS End-Use SubCategory,Minimum Equipment Level for All Day Types {W},Maximum Equipment Level for All Day Types {W},Minimum Equipment Level for Weekdays {W}, Maximum Equipment Level for Weekdays {W},Minimum Equipment Level for Weekends/Holidays {W}, Maximum Equipment Level for Weekends /Holidays {W},Minimum Equipment Level for Summer Design Days {W}, Maximum Equipment Level for Summer Design Days {W},Minimum Equipment Level for Winter Design Days {W}, Maximum Equipment Level for Winter Design Days {W},Design Air Volume Flow Rate {m3/s}
+ ElectricEquipment:ITE:AirCooled Internal Gains Nominal, WCCDATACENTER_EQUIP,DATA CENTER OPERATION SCHEDULE,ZONE,24964.00,0.0,9985600.000,400.000,N/A,1.0,ITE-CPU,ITE-Fans,ITE-UPS,4992800.000,9985600.000,9985600.000,9985600.000,9985600.000,9985600.000,9985600.000,9985600.000,9985600.000,9985600.000,998.5600000000
+! <Construction CTF>,Construction Name,Index,#Layers,#CTFs,Time Step {hours},ThermalConductance {w/m2-K},OuterThermalAbsorptance,InnerThermalAbsorptance,OuterSolarAbsorptance,InnerSolarAbsorptance,Roughness
+! <Material CTF Summary>,Material Name,Thickness {m},Conductivity {w/m-K},Density {kg/m3},Specific Heat {J/kg-K},ThermalResistance {m2-K/w}
+! <Material:Air>,Material Name,ThermalResistance {m2-K/w}
+! <CTF>,Time,Outside,Cross,Inside,Flux (except final one)
+ Construction CTF,EXTWALL,   1,   4,   7,   1.000,     0.2736    ,   0.300,   0.900,   0.900,   0.700,Smooth
+ Material CTF Summary,EXT_FINISH_LIGHTCOLOR,  0.0000,         0.000,      0.000,        0.000,  0.5000E-01
+ Material CTF Summary,CMU_Concrete_200mm,  0.2000,         1.110,   1840.000,      920.000,  0.1802    
+ Material CTF Summary,R19_CONTINUOUS_INSULATION,  0.0000,         0.000,      0.000,        0.000,   3.350    
+ Material CTF Summary,Gypsum_12mm,  0.0120,         0.160,    800.000,     1090.000,  0.7500E-01
+ CTF,   7,     -0.32691695E-10,      0.24803867E-13,     -0.38435643E-09,      0.10724566E-13
+ CTF,   6,      0.17195036E-06,      0.46235717E-09,      0.13422342E-05,     -0.14010110E-09
+ CTF,   5,     -0.18665977E-03,      0.66076650E-06,     -0.10077974E-02,      0.47587870E-06
+ CTF,   4,      0.35479963E-01,      0.10880413E-03,      0.10467528    ,     -0.35451248E-03
+ CTF,   3,      -1.2942405    ,      0.23107421E-02,      -1.5388696    ,      0.36447473E-01
+ CTF,   2,       10.239342    ,      0.73579034E-02,       5.5981089    ,     -0.50124702    
+ CTF,   1,      -21.092388    ,      0.33917080E-02,      -7.2815911    ,       1.4167335    
+ CTF,   0,       12.125211    ,      0.77920177E-04,       3.1319299    
+ Construction CTF,ROOF,   2,   2,   3,   1.000,     0.1478    ,   0.300,   0.900,   0.900,   0.700,Smooth
+ Material CTF Summary,R38_ROOF_INSULATION,  0.0000,         0.000,      0.000,        0.000,   6.690    
+ Material CTF Summary,Gypsum_12mm,  0.0120,         0.160,    800.000,     1090.000,  0.7500E-01
+ CTF,   3,      0.10485909E-19,     -0.13481558E-16,      0.20406186E-14,       0.0000000    
+ CTF,   2,      0.26809208E-09,      0.84441650E-08,      0.57447501E-05,     -0.14240761E-14
+ CTF,   1,     -0.14161755E-03,      0.16446165E-01,      -2.8736627    ,      0.13306728E-04
+ CTF,   0,      0.14795931    ,      0.13137152    ,       3.0214746    
+ Construction CTF,SLAB_FLOOR_DC,   3,   1,   5,   1.000,      9.333    ,   0.900,   0.900,   0.700,   0.700,MediumRough
+ Material CTF Summary,Concrete_Slab_150mm,  0.1500,         1.400,   2200.000,      900.000,  0.1071    
+ CTF,   5,     -0.27585173E-10,      0.20842466E-10,     -0.27585173E-10,      0.46848259E-15
+ CTF,   4,      0.84387687E-05,      0.55351548E-05,      0.84387687E-05,     -0.98578179E-09
+ CTF,   3,     -0.29272628E-01,      0.14080899E-01,     -0.29272628E-01,      0.31747817E-04
+ CTF,   2,       3.1648903    ,      0.95397820    ,       3.1648903    ,     -0.15870516E-01
+ CTF,   1,      -25.511667    ,       3.7793512    ,      -25.511667    ,      0.40979650    
+ CTF,   0,       28.032436    ,      0.90897867    ,       28.032436    
+ Construction CTF,PLENUM FLOOR,   4,   1,   3,   1.000,      2.556    ,   0.900,   0.900,   0.200,   0.200,MediumRough
+ Material CTF Summary,C19-2 IN Light Weight Concrete,  0.0508,         0.130,    480.554,      836.800,  0.3912    
+ CTF,   3,     -0.60154766E-08,      0.43583349E-08,     -0.60154766E-08,      0.11563294E-17
+ CTF,   2,      0.85284660E-02,      0.50347949E-02,      0.85284660E-02,     -0.54869511E-07
+ CTF,   1,      -1.8180104    ,      0.97445497    ,      -1.8180104    ,      0.18437729E-01
+ CTF,   0,       4.3187498    ,       1.5297781    ,       4.3187498    
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,ZONE,Mixing/Well-Stirred
+RoomAir Model,PLENUM,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    1
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.1000    
+ Heating Sizing Factor Information, Zone ZONE,   1.1000    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.3000    
+ Cooling Sizing Factor Information, Zone ZONE,   1.3000    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, ZONE, Cooling, 16782640.48343, 21817432.62846, 1730.47952, 2249.62337, DENVER ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00, 34.10000, 5.95941E-003, 24964.00000, 0.00000, 0.00000, 0.00000
+! <System Sizing Information>, System Name, Load Type, Peak Load Kind, User Design Capacity [W], Calc Des Air Flow Rate [m3/s], User Des Air Flow Rate [m3/s], Design Day Name, Date/Time of Peak
+ System Sizing Information, ZONE AIR SYSTEM, Cooling, Sensible, 23933442.15, 2249.62337, 2249.62337, DENVER ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, ZONE AIR SYSTEM, Heating, Sensible, 0.00, 0.00000, 0.00000, ,  00:00:00
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, ZONE VAV SYSTEM, Design Size Maximum Air Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, ZONE VAV SYSTEM, Design Size Constant Minimum Air Flow Fraction, 0.20000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, ZONE VAV SYSTEM, Design Size Minimum Air Flow Rate [m3/s], 449.92467
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 449.92467
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 449.92467
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Sum of Air Terminal Maximum Flow Rates [m3/s], 2249.62337
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Adjusted Heating Design Air Flow Rate [m3/s], 449.92467
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Adjusted Cooling Design Air Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Adjusted Main Design Air Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, User Heating Air Flow Ratio [], 0.40000
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Calculated Heating Air Flow Ratio [], 0.20000
+ Component Sizing Information, AirLoopHVAC, ZONE AIR SYSTEM, Design Supply Air Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, Controller:OutdoorAir, DATA CENTER OA CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, Controller:OutdoorAir, DATA CENTER OA CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Fan:VariableVolume, ZONE SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 2249.62337
+ Component Sizing Information, Fan:VariableVolume, ZONE SUPPLY FAN, Design Electric Power Consumption [W], 1221224.11611
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Inlet Air Temperature [C], 30.11600
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Inlet Water Temperature [C], 7.00000
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Outlet Air Temperature [C], 18.90000
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Inlet Air Humidity Ratio [kgWater/kgDryAir], 8.50000E-003
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Outlet Air Humidity Ratio [kgWater/kgDryAir], 8.50000E-003
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Coil Load [W], 25408446.70449
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Water Flow Rate [m3/s], 1.51331
+ Component Sizing Information, Coil:Cooling:Water, ZONE CW COOLING COIL, Design Size Design Air Flow Rate [m3/s], 2249.62337
+! <Water Cooling Coil Capacity Information>,Component Type,Name,Nominal Total Capacity {W},Nominal Sensible Capacity {W},Nominal Latent Capacity {W},Nominal Sensible Heat Ratio, Nominal Coil UA Value {W/C}, Nominal Coil Surface Area {m2}
+Water Cooling Coil Capacity Information,Coil:Cooling:Water,ZONE CW COOLING COIL,34726933.98,22952660.24,11774273.73,0.66,2415840.96,24502.80
+ Component Sizing Information, Controller:WaterCoil, CW COIL CONTROLLER, Maximum Actuated Flow [m3/s], 1.51331
+ Component Sizing Information, Controller:WaterCoil, CW COIL CONTROLLER, Controller Convergence Tolerance, 3.14669E-007
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Maximum Loop Flow Rate [m3/s], 1.51331
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Plant Loop Volume [m3], 181.59692
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Design Supply Temperature [C], 7.00000
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Design Return Temperature [C], 3.00000
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Sizing option (Coincident/NonCoincident), 1.00000
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Minimum Loop Flow Rate [m3/s], 0.00000
+ Component Sizing Information, PlantLoop, CHILLED WATER LOOP, Design Capacity [W], 25408446.70449
+ Component Sizing Information, Pump:VariableSpeed, CW CIRC PUMP, Design Flow Rate [m3/s], 1.51331
+ Component Sizing Information, Pump:VariableSpeed, CW CIRC PUMP, Design Power Consumption [W], 557.51093
+ Component Sizing Information, Chiller:Electric, CHILLER, Design Size Nominal Capacity [W], 25408446.70449
+ Component Sizing Information, Chiller:Electric, CHILLER, Design Size Design Chilled Water Flow Rate [m3/s], 1.51331
+ Component Sizing Information, Chiller:Electric, CHILLER, Design Size Design Condenser Water Flow Rate [m3/s], 1.43046
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Maximum Loop Flow Rate [m3/s], 1.43046
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Plant Loop Volume [m3], 171.65576
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Design Supply Temperature [C], 20.00000
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Design Return Temperature [C], 15.00000
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Sizing option (Coincident/NonCoincident), 1.00000
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Minimum Loop Flow Rate [m3/s], 0.00000
+ Component Sizing Information, PlantLoop, CONDENSER LOOP, Design Capacity [W], 30021890.55304
+ Component Sizing Information, Pump:VariableSpeed, COND CIRC PUMP, Design Flow Rate [m3/s], 1.43046
+ Component Sizing Information, Pump:VariableSpeed, COND CIRC PUMP, Design Power Consumption [W], 632.38934
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Design Water Flow Rate [m3/s], 1.43046
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Fan Power at Design Air Flow Rate [W], 313958.54772
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Design Air Flow Rate [m3/s], 1008.48473
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Nominal Capacity [W], 33282206.03219
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Air Flow Rate in free convection regime [m3/s], 201.69695
+ Component Sizing Information, CoolingTower:VariableSpeed, COOLING TOWER, Tower capacity in free convection regime at design conditions [W], 6656441.20644
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,FULLYEAR,WeatherFileRunPeriod,01/01/2017,12/31/2017,Sunday,365,Use RunPeriod Specified Day,Yes,Yes,No,Yes,Yes,Clark and Allen
+Environment:Daylight Saving,No,
+Environment:WarmupDays, 61
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,ZONE,RunPeriod: FULLYEAR,0.4041851140,0.9445626595,Pass,Pass,0.1697352096,0.2085730356,Pass,Pass
+ Warmup Convergence Information,PLENUM,RunPeriod: FULLYEAR,2.0046878659,1.8556784034,Pass,Pass,0.6863638358,0.6540044088,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data
