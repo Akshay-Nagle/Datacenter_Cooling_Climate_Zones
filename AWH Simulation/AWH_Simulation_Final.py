@@ -172,7 +172,7 @@ AUTOSIZE_UNITS = True   # fleet sized to each city's own peak-hour demand
 # ----------------------------------------------------------------------
 CITY_CONFIGS = {
     "ATL": {"elevation_m": 313.0, "label": "Atlanta GA 3A"},
-    "MI":  {"elevation_m": 11.0,   "label": "Miami FL 1A"},
+    "MI":  {"elevation_m": 2.7,   "label": "Miami FL 1A"},
     "MSP": {"elevation_m": 256.0, "label": "Minneapolis MN 6A"},
     "SD":  {"elevation_m": 4.6,   "label": "San Diego CA 3C"},
     "CHI": {"elevation_m": 201.0, "label": "Chicago IL 5A"},
