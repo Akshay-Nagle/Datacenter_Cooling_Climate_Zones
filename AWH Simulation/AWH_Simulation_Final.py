@@ -1,4 +1,4 @@
-# Waste-heat-driven Atmospheric Water Harvesting (AWH) simulation
+# Waste-heat-assisted Atmospheric Water Harvesting (AWH) simulation
 # Hybrid cooling system only -- ACC and WCC are NOT connected to AWH.
 #
 # SORBENT + DEVICE: Ni2Cl2(BTDD) housed in a 3-module rotating adsorption
@@ -32,20 +32,27 @@
 # can draw from -- gating on mass flow rather than the heat rejection
 # meter avoids silently assuming an unusable heat source is usable. This
 # gating was verified empirically per-city before writing this script (see
-# your own diagnostic runs): chiller-on hours range from ~2.4% of the year
-# (Denver) to ~37.8% (Miami).
+# your own diagnostic runs): chiller-on hours range from ~3.0% of the year
+# (Denver) to ~52.3% (Miami) -- see manuscript Table 4.
 #
-# BLOCK-CONTIGUITY GATING: a contiguity check across all 7 cities' hourly
-# data found that most chiller-on hours occur in SHORT, often ISOLATED
-# runs (median block length = 1 hour in 5 of 7 cities; 66-86% of blocks
-# shorter than the 3-hour desorption cycle). Because no kinetics curve
-# exists for PARTIAL desorption within an incomplete cycle for this
-# material (only endpoint completeness at fixed durations is cited), any
-# contiguous block shorter than the required cycle time is credited with
-# ZERO water production -- not partial credit. This is a conservative,
-# explicitly documented modeling choice, not an oversight: assuming linear
-# partial credit would require a kinetics curve this literature does not
-# provide.
+# BED-AWARE ACCUMULATION (see SI Section S3.4): a contiguity check across
+# all 7 cities' hourly data found that most chiller-on hours occur in
+# SHORT, often ISOLATED runs (median block length = 2 hours in all seven
+# cities; 52-62% of contiguous blocks shorter than the 3-hour desorption
+# cycle). An earlier design credited ZERO water production to any block
+# shorter than the required cycle time, on the reasoning that no published
+# kinetics curve exists for PARTIAL desorption within an incomplete cycle
+# for this material. That block-contiguity approach was REPLACED by the
+# bed-aware accumulator implemented below (run_bed_aware_cycles), which
+# instead RETAINS partial desorption progress in the sorbent bed's thermal
+# mass across chiller-off gaps and credits water only once accumulated
+# on-time reaches cycle_min. This is more physically realistic than an
+# instantaneous per-block reset, though it has NOT been validated against
+# measured partial-cycle kinetics for Ni2Cl2(BTDD), since no such data
+# exists in the cited literature -- flag accordingly if used. Only the
+# accumulation still in progress and short of cycle_min when the year ends
+# goes permanently uncredited; this residual stays under 0.8% of annual
+# chiller-on hours in every city and scenario.
 #
 # HEAT PUMP: required because the actual hourly condenser return
 # temperature (verified per-city, means ~27-35C depending on city) sits
